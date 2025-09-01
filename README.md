@@ -20,26 +20,18 @@ Kotlin 기반 지출기록 앱입니다.
 
 ```bash
 app/
-├── java/com/example/spendnote/
-│   ├── data/                     # 데이터 관련 코드 관리
-│   │   ├── model/                 # 데이터 모델 클래스
-│   │   ├── repository/            # 데이터 처리 및 저장소 역할
-│   │   └── local/                 # 로컬 DB 및 DAO 정의 (Room)
-│   ├── ui/                       # UI 관련 코드 (화면별 분리)
-│   │   ├── auth/                  # 로그인 및 회원가입 화면
-│   │   ├── home/                  # 홈 화면
-│   │   ├── calendar/              # 달력 화면
-│   │   ├── expenses/              # 소비 기록 화면
-│   │   ├── budget/                # 예산 및 구독 관리 화면
-│   │   ├── analysis/              # 소비 분석 화면
-│   │   └── motivation/            # 동기부여 화면
-│   └── MainActivity.kt            # 앱 진입점 액티비티
+├── manifests/
+│   └── AndroidManifest.xml           # 앱의 기본 설정 및 컴포넌트(Activity, Service 등) 등록
+├── kotlin+java/
+│   └── com.example.spend_note/
+│       ├── MainActivity.kt           # 앱의 메인 진입점 액티비티
+│       └── (필요 시) 기타 화면/유틸 클래스 # 다른 화면을 담당하는 액티비티나 헬퍼 클래스 등
 ├── res/
-│   ├── layout/                    # XML 레이아웃 파일
-│   ├── drawable/                  # 이미지, 아이콘 등 리소스
-│   └── values/                    # 색상, 문자열, 스타일 정의
-└── AndroidManifest.xml            # 앱 설정 및 컴포넌트 등록
-...
+│   ├── drawable/                     # 이미지, 아이콘, 배경 등 시각적 리소스
+│   ├── layout/                       # UI 화면 레이아웃 XML 파일
+│   ├── mipmap/                       # 앱 아이콘 리소스
+│   └── values/                       # 색상, 문자열, 스타일 등 앱 디자인 정의
+└── Gradle Scripts/                   # 빌드 설정 파일
 ```
 
 ----------------------------------------------------------------- 이 아래로는 수정 필요
